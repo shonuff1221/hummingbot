@@ -30,15 +30,15 @@ services:
   #    - SCRIPT_CONFIG=conf_v2_with_controllers.yml
 
   # gateway:
-  #  restart: always
-  #  container_name: gateway
-  #  image: hummingbot/gateway:latest
-  #  ports:
-  #    - "15888:15888"
-  #  volumes:
-  #    - "./gateway-files/conf:/home/gateway/conf"
-  #    - "./gateway-files/logs:/home/gateway/logs"
-  #    - "./certs:/home/gateway/certs"
-  #  environment:
-  #    - GATEWAY_PASSPHRASE=admin
-  #    - DEV=true
+     restart: always
+     container_name: gateway
+     image: hummingbot/gateway:latest
+     ports:
+       - "15888:15888"
+     volumes:
+       - "./gateway-files/conf:/home/gateway/conf"
+       - "./gateway-files/logs:/home/gateway/logs"
+       - "./certs:/home/gateway/certs"
+     environment:
+       - GATEWAY_PASSPHRASE=admin
+       - DEV=true
